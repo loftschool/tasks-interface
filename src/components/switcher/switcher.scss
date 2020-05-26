@@ -1,0 +1,28 @@
+.block {
+  display: block;
+  cursor: pointer;
+}
+
+.radio {
+  display: none;
+
+  &:checked ~ .btn {
+    background: #9e91e3;
+    color: #fff;
+  }
+}
+
+.btn {
+  padding: 20px;
+  border: 0 none;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.tasks {
+  background: #fff;
+  overflow: hidden;
+  border-radius: 5px;
+  display: inline-flex;
+  box-shadow: 0.5px 0.9px 11px 0 #203c5a0c;
+}

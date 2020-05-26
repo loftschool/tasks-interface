@@ -1,0 +1,38 @@
+.tasks-item-component {
+  background: #fff;
+  padding: 30px 40px;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.desc {
+  font-size: 14px;
+}
+
+.prism-container {
+  white-space: pre;
+}
+
+
+.prism-wrapper {
+  position: relative;
+}
+
+.result {
+  position: relative;
+}
+
+.run-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  &:before {
+    content: "▶";
+    padding: 10px;
+    display: block;
+  }
+}
