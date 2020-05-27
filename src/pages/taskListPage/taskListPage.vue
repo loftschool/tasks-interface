@@ -13,24 +13,20 @@
 <script>
 import tasksList from "../../components/tasksList";
 import divider from "../../components/divider";
-import items from "../../data/dom";
-import Prism from "prismjs";
-
+import data from "../../data";
 export default {
   components: {
     tasksList,
     divider
   },
-  data() {
-    return {
-      items
-    };
+  computed: {
+    items() {
+      const category = this.$route.params["category"];
+      return data[category];
+    }
   },
-  mounted() {
-    Prism.highlightAll();
+  watch: {
+    items() {}
   }
 };
 </script>
-
-<style>
-</style>

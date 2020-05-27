@@ -1,14 +1,10 @@
-import tasksPage from "../pages/tasksPage";
-import commonPage from "../pages/commonPage";
-import domPage from "../pages/domPage";
+import mainPage from "../pages/mainPage";
+import taskList from "../pages/taskListPage";
 
 export default [
   {
     path: "/",
-    component: tasksPage,
-    children: [
-      { path: "/", component: commonPage },
-      { path: "/dom", component: domPage }
-    ],
+    component: mainPage,
+    children: [{ path: "/:category", component: taskList }],
   },
 ];

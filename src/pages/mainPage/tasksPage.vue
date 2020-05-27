@@ -14,6 +14,9 @@ import switcher from "../../components/switcher";
 export default {
   components: {
     switcher
+  },
+  created() {
+    this.$router.replace("/common");
   }
 };
 </script>

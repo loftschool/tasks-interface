@@ -17,6 +17,7 @@
 </template>
 <script>
 import markdownIt from "markdown-it";
+import Prism from "prismjs";
 export default {
   props: {
     task: {
@@ -42,6 +43,9 @@ export default {
     run() {
       eval(`alert(${this.task.result})`);
     }
+  },
+  mounted() {
+    Prism.highlightAll();
   }
 };
 </script>
