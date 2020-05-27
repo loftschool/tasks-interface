@@ -6,8 +6,6 @@
 
 <script>
 import "normalize.css";
-import Prism from "prismjs";
-Prism.highlightAll();
 
 export default {
   name: "App",

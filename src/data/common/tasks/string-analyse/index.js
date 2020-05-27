@@ -1,3 +1,4 @@
+import { path, result } from "./solution";
 export default {
   id: Math.random(),
   title: "Анализ строки",
@@ -5,11 +6,9 @@ export default {
     Написать функцию которая будет принимать в качестве аргумента строку имитирующую адрес до файла. Функция должна возвращать **true** или **false** в зависимости от того есть у этого файла расширение **html** или нет.
     `,
   code: `
-      const path = "/users/download/index.html"
+      const path = "${path}"
 
       console.log(isHtml(path))
     `,
-  alert: `
-    true
-    `,
+  result: `"${result}" `,
 };

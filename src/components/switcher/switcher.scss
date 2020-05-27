@@ -6,7 +6,7 @@
 .radio {
   display: none;
 
-  &:checked ~ .btn {
+  &:checked~.btn {
     background: #9e91e3;
     color: #fff;
   }
@@ -17,6 +17,17 @@
   border: 0 none;
   overflow: hidden;
   border-radius: 5px;
+  display: block;
+  text-decoration: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.active {
+    background: #9e91e3;
+    color: #fff;
+  }
 }
 
 .tasks {

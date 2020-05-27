@@ -1,7 +1,16 @@
 <template>
   <div class="switcher-component">
     <ul class="tasks">
-      <li v-for="item in items" @click="$emit('changeTab')" :key="item.id">
+      <li v-for="item in items" :key="item.id">
+        <router-link 
+          :to="item.href"
+          class="btn"
+          active-class="active"
+          tag="button"
+          exact
+        >{{item.title}}</router-link>
+      </li>
+      <!-- <li v-for="item in items" @click="$emit('changeTab')" :key="item.id">
         <label class="block">
           <input
             class="radio"
@@ -13,15 +22,15 @@
           />
           <div class="btn">{{item.title}}</div>
         </label>
-      </li>
+      </li>-->
     </ul>
   </div>
 </template>
 
 <script>
 const items = [
-  { id: 0, title: "Общие задачи", value: "common" },
-  { id: 1, title: "Задачи по DOM", value: "dom" }
+  { id: 0, title: "Общие задачи", value: "common", href: "/" },
+  { id: 1, title: "Задачи по DOM", value: "dom", href: "/dom" }
 ];
 
 export default {
