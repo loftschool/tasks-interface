@@ -1,5 +1,5 @@
 export default {
   base: [
-    require("./tasks/array-filter/index.js").default,
+    require("./tasks/blocks-coloring/index").default,
   ]
 };

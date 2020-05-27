@@ -6,5 +6,3 @@ const isHtml = (path) => {
 };
 
 export const result = isHtml(path);
-
-console.log(result);
