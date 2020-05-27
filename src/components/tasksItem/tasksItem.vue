@@ -3,7 +3,7 @@
     <h2 class="title">#{{ndx}} {{task.title}}</h2>
     <div class="desc" v-html="taskDescription"></div>
 
-    <div class="dom-result" v-if="$slots.default">
+    <div class="dom-result" data-title="Пример работы" v-if="$slots.default">
       <slot></slot>
     </div>
 
@@ -13,7 +13,6 @@
       </pre>
       <button @click="run" class="run-btn"></button>
     </div>
-
   </div>
 </template>
 <script>

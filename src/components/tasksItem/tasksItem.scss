@@ -12,6 +12,26 @@
   font-size: 14px;
 }
 
+.dom-result {
+  border-top: 1px solid #e1e1e1;
+  position: relative;
+  padding: 10px;
+  padding-top: 50px;
+  margin-top: 50px;
+
+  &:before {
+    content: attr(data-title)":";
+    font-weight: bold;
+    position: absolute;
+    top: -1px;
+    left: 0;
+    padding-right: 10px;
+    background: #fff;
+    transform: translateY(-50%);
+    line-height: 1;
+  }
+}
+
 .prism-container {
   white-space: pre;
 }
