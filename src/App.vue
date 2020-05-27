@@ -1,6 +1,8 @@
 <template>
   <div class="wrapper">
-    <router-view />
+    <div class="maincontent">
+      <router-view />
+    </div>
   </div>
 </template>
 
@@ -8,7 +10,7 @@
 import "normalize.css";
 
 export default {
-  name: "App",
+  name: "App"
 };
 </script>
 
@@ -36,8 +38,11 @@ body {
 .wrapper {
   min-height: 100%;
   background: #fafafa;
-  padding: 60px 0;
   overflow: hidden;
+}
+
+.maincontent {
+  padding: 60px 0;
 }
 
 .container {

@@ -1,1 +1,1 @@
-export { default } from "./tasksPage.vue";
+export { default } from "./mainPage.vue";

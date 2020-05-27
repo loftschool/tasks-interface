@@ -16,7 +16,7 @@ export default {
     switcher
   },
   created() {
-    this.$router.replace("/common");
+    // this.$router.replace("/common");
   }
 };
 </script>

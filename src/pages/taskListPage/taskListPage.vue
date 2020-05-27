@@ -14,6 +14,7 @@
 import tasksList from "../../components/tasksList";
 import divider from "../../components/divider";
 import data from "../../data";
+
 export default {
   components: {
     tasksList,
