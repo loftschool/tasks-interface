@@ -18,4 +18,8 @@ export default [
     path: "/:category/:alias",
     component: singleTask,
   },
+  {
+    path: "*",
+    redirect: "/"
+  },
 ];

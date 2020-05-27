@@ -26,8 +26,10 @@ export default {
       return data[category];
     }
   },
-  watch: {
-    items() {}
+  created() {
+    if (Boolean(this.items) === false) {
+      this.$router.replace("/common");
+    }
   }
 };
 </script>

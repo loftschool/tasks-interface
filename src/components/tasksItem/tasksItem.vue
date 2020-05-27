@@ -1,6 +1,9 @@
 <template>
   <div class="tasks-item-component">
-    <h2 class="title">#{{ndx}} {{task.title}}</h2>
+    <h2 class="title">
+      <span v-if="ndx">#{{ndx}}&nbsp;</span>
+      <span>{{task.title}}</span>
+    </h2>
     <div class="desc" v-html="taskDescription"></div>
 
     <div class="dom-result" data-title="Пример работы" v-if="$slots.default">
@@ -27,8 +30,7 @@ export default {
     },
     ndx: {
       type: Number,
-      default: 1,
-      required: true
+      default: 0
     }
   },
   computed: {
