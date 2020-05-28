@@ -1,11 +1,11 @@
 <template>
   <div class="common-page-component">
     <div class="container">
-      <tasks-list class="list" :items="items.base" />
+      <tasks-list :category="category" class="list" :items="items.base" />
     </div>
     <divider title="Дополнительные задания" />
     <div class="container">
-      <tasks-list class="list" :items="items.extra" />
+      <tasks-list :category="category" class="list" :items="items.extra" />
     </div>
   </div>
 </template>
@@ -21,9 +21,11 @@ export default {
     divider
   },
   computed: {
+    category() {
+      return this.$route.params["category"];
+    },
     items() {
-      const category = this.$route.params["category"];
-      return data[category];
+      return data[this.category];
     }
   },
   created() {

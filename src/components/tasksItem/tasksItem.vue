@@ -1,13 +1,23 @@
 <template>
   <div class="tasks-item-component">
-    <h2 class="title">
+    <h2 v-if="titleIsLinked" class="title">
+      <router-link :to="route">
+        <span v-if="ndx">#{{ndx}}&nbsp;</span>
+        <span>{{task.title}}</span>
+      </router-link>
+    </h2>
+
+    <h2 v-else class="title">
       <span v-if="ndx">#{{ndx}}&nbsp;</span>
       <span>{{task.title}}</span>
     </h2>
+
     <div class="desc" v-html="taskDescription"></div>
 
-    <div class="dom-result" data-title="Пример работы" v-if="$slots.default">
-      <slot></slot>
+    <div class="dom-result" data-title="Пример работы" v-if="task.component">
+      <div class="component-wrapper">
+        <component :is="task.component" />
+      </div>
     </div>
 
     <div class="result" v-else>
@@ -31,6 +41,13 @@ export default {
     ndx: {
       type: Number,
       default: 0
+    },
+    category: {
+      type: String
+    },
+    titleIsLinked: {
+      type: Boolean,
+      default: true
     }
   },
   computed: {
@@ -39,6 +56,12 @@ export default {
       const string = this.task.desc.trim();
 
       return md.render(string);
+    },
+    route() {
+      return {
+        name: "single-task",
+        params: { category: this.category, alias: this.task.alias }
+      };
     }
   },
   methods: {

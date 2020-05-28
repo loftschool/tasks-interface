@@ -11,12 +11,14 @@ export default [
       {
         path: ":category",
         component: taskList,
+        name: "category"
       },
     ],
   },
   {
     path: "/:category/:alias",
     component: singleTask,
+    name: "single-task"
   },
   {
     path: "*",
