@@ -1,12 +1,14 @@
 <template>
   <div class="simple-overlay-container">
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem magnam ratione quasi alias adipisci molestias doloribus, provident eum natus rerum, numquam delectus cum at nobis consectetur deserunt perspiciatis eveniet temporibus.</p>
-    <button class="btn" id="openOverlay">открыть</button>
-    <script type="template" id="overlayTemplate">
-      <div class="modal-container">
-        <a class="close" href="#">x</a>
-        <div class="content"></div>
-      </div>
+    <div class="container">
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem magnam ratione quasi alias adipisci molestias doloribus, provident eum natus rerum, numquam delectus cum at nobis consectetur deserunt perspiciatis eveniet temporibus.</p>
+      <button class="btn" id="openOverlay">открыть</button>
+    </div>
+    <script type="html/template" id="overlayTemplate">
+  <div class="modal-container">
+    <a class="close" href="#">x</a>
+    <div class="content"></div>
+  </div>
     </script>
   </div>
 </template>
@@ -14,7 +16,7 @@
 <script>
 const solution = () => {
   const openButton = document.querySelector("#openOverlay");
-  const successOverlay = createOverlay("Привет, <b>loftschool</b>!");
+  const successOverlay = createOverlay("Hello, <b>world</b>!");
   const body = document.querySelector(".simple-overlay-container");
 
   openButton.addEventListener("click", function() {
@@ -56,7 +58,7 @@ const solution = () => {
 
 const solution2 = () => {
   const openButton = document.querySelector("#openOverlay");
-  const successOverlay = createOverlay("Привет, <b>loftschool</b>!");
+  const successOverlay = createOverlay("Hello, <b>world</b>!");
   const body = document.querySelector(".simple-overlay-container");
 
   openButton.addEventListener("click", function() {
@@ -145,6 +147,12 @@ export default {
   }
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .btn {
   background: #a492e6;
   color: #fff;
@@ -153,7 +161,7 @@ export default {
   outline: none;
 
   &:hover {
-    opacity: .8;
+    opacity: 0.8;
   }
 }
 </style>

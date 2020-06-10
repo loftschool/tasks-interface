@@ -81,6 +81,39 @@ const solution2 = () => {
   });
 };
 
+const solution4 = () => {
+  const left = document.querySelector("#left");
+  const right = document.querySelector("#right");
+  const itemsList = document.querySelector("#items");
+  const computed = window.getComputedStyle(itemsList);
+  const items = document.querySelectorAll(".item");
+
+  const minRight = 0;
+  const step = parseInt(getComputedStyle(items[0]).width);
+  const preShownItems = 300 / step;
+  const maxRight = (items.length - preShownItems) * step;
+
+  let currentRight = 0;
+
+  itemsList.style.right = currentRight;
+
+  right.addEventListener("click", function(e) {
+    e.preventDefault();
+    if (currentRight < maxRight) {
+      currentRight += step;
+      itemsList.style.right = currentRight + "px";
+    }
+  });
+
+  left.addEventListener("click", function(e) {
+    e.preventDefault();
+    if (currentRight > minRight) {
+      currentRight -= step;
+      itemsList.style.right = currentRight + "px";
+    }
+  });
+};
+
 const solution3 = () => {
   const left = document.querySelector("#left");
   const right = document.querySelector("#right");

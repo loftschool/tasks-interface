@@ -1,7 +1,7 @@
 <template>
   <div class="blocks-coloring-container">
     <div class="controls">
-      <input type="number" class="amount-selector" />
+      <input type="number" min="0" class="amount-selector" />
       <input type="color" class="color-selector" />
     </div>
     <div class="blocks"></div>
@@ -28,11 +28,11 @@ const colorTheBlock = (block, color) => {
 
 const solution = () => {
   const container = document.querySelector(".blocks-coloring-container");
-  const amountSelector = container.querySelector(".amount-selector");
+  const quantitySelector = container.querySelector(".amount-selector");
   const colorSelector = container.querySelector(".color-selector");
   const blocksContainer = container.querySelector(".blocks");
 
-  amountSelector.addEventListener("change", e => {
+  quantitySelector.addEventListener("change", e => {
     const amount = e.target.value;
 
     const blocksMarkup = createBlocksMarkup(amount);
