@@ -17,4 +17,8 @@ export default {
       console.log(getWorthyWorkers(workers))
     `,
   result: `"${result}"`,
+  links: ` 
+  + [push - добавление элемента в массив](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
+  + [forEach - цикл для массива](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+  `,
 };

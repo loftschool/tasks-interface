@@ -12,4 +12,7 @@ export default {
       console.log(isHtml(path))
     `,
   result: `"${result}" `,
+  links: `
+  + [slice - извлечение подстроки](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/slice)
+  `
 };

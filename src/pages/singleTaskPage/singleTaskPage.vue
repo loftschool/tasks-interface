@@ -3,16 +3,20 @@
     <div class="container">
       <tasks-item :task="task" :titleIsLinked="false" />
     </div>
+    <div class="container" v-if="task.links && task.links.length">
+      <links :links="task.links" />
+    </div>
   </div>
 </template>
 
 <script>
 import tasksItem from "../../components/tasksItem";
 import data from "../../data";
+import links from "../../components/links";
 
 export default {
   components: {
-    tasksItem
+    tasksItem, links
   },
   methods: {
     flattenTheObject(obj) {

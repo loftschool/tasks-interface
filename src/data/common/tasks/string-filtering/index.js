@@ -12,4 +12,9 @@ export default {
       console.log(getVowels(string));
     `,
   result: `"${result}"`,
+  links: ` 
+  + [indexOf - поиск индекса элемента](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf)
+  + [toLowerCase - приведение к нижнему регистру](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase)
+  + [includes - проверка на присутсвие символа](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/includes)
+  `,
 };

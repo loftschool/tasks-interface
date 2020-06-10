@@ -16,4 +16,7 @@ export default {
   result: `
     "${result}"
     `,
+  links: `
+  + [Остаток от деления](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder)
+  `
 };

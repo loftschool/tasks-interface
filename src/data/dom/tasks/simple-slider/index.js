@@ -8,4 +8,8 @@ export default {
     Это простейший слайдер элементов. При клике на правую стрелочку, элементы должны сдвигаться вправо. При клике на левую стрелочку, элементы должны сдвигаться влево.
     `,
   component: result,
+  links: `
+  + [getComputedStyles - получение объекта стилей](https://developer.mozilla.org/ru/docs/Web/API/Window/getComputedStyle)
+  + [parseInt - приведение строки к числу](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
+  `
 };
